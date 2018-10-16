@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
 
-str = 'Hello World!'
+mystr = 'Hello World!'
 
-print(str)                    # Prints complete string 
-print(str[0])                 # Prints first character of the string 
-print(str[2:5])               # Prints characters starting from 3rd to 6th 
-print(str[2:])                # Prints string starting from 3rd character 
-print(str * 2)                # Prints string two times 
-print(str + "TEST")           # Prints concatenated string
+print(mystr)                    # Prints complete string 
+print(mystr[0])                 # Prints first character of the string 
+print(mystr[2:5])               # Prints characters starting from 3rd to 6th 
+print(mystr[2:])                # Prints string starting from 3rd character 
+print(mystr * 2)                # Prints string two times 
+print(mystr + "TEST")           # Prints concatenated string
 
