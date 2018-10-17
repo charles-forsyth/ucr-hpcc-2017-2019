@@ -13,9 +13,9 @@ import json
 
 if not os.path.isfile('data-big.txt'):
     data = {}
-    for i in range(999999999999):
+    for i in range(99999999):
         data['r'+ str(i)] = random.randint(1,99999)
-    with open('data.txt', 'w') as file:
+    with open('data-big.txt', 'w') as file:
         file.write(json.dumps(data))
 
 with open('data-big.txt', 'r') as file:
