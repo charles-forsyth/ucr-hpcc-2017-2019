@@ -27,8 +27,7 @@ those edits.
 
 ## Notes
 
-- The AWS screenshots are from a 2018 training account. Usernames, the account ID and an
-  access key ID shown in the original screenshots are redacted.
+- The AWS screenshots are the originals from the 2018 training account.
 - Host names such as `biocluster.ucr.edu` are historical and may no longer resolve.
 - This repository is shared to document my work. The code and docs were created for UCR
   HPCC; no license is granted here beyond viewing.
