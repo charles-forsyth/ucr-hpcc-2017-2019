@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UCR HPCC work, 2017-2019 | Charles Forsyth</title>
+  <meta name="description" content="Portfolio of work as lead HPC administrator at the UC Riverside High Performance Computing Center, 2017-2019: the HPCC AWS Cluster cloud service, 57 environment modules, and a Python workshop.">
+  <meta name="theme-color" content="#0a110d">
+  <link rel="canonical" href="https://charles-forsyth.github.io/ucr-hpcc-2017-2019/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="UCR HPCC work, 2017-2019">
+  <meta property="og:description" content="On-demand lab-private HPC clusters in AWS, 57 environment modules for the HPCC software stack, and an Introduction to Python workshop. UC Riverside, 2017-2019.">
+  <meta property="og:url" content="https://charles-forsyth.github.io/ucr-hpcc-2017-2019/">
+  <meta property="og:image" content="https://charles-forsyth.github.io/ucr-hpcc-2017-2019/img/cloud-aws-console.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <a class="brand" href="https://charles-forsyth.github.io/">Charles Forsyth</a>
+        <span class="topbar-sep" aria-hidden="true">/</span>
+        <span class="topbar-label">Projects</span>
+      </div>
+      <span class="topbar-project">ucr-hpcc-2017-2019</span>
+    </div>
+  </header>
+
+  <nav class="section-nav" aria-label="Page sections">
+    <div class="container nav-inner">
+      <a href="#whats-here">What's here</a>
+      <a href="#cloud">HPCC AWS Cluster</a>
+      <a href="#gallery">Screenshots</a>
+      <a href="#modules">Modules</a>
+      <a href="#workshop">Python workshop</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#links">Links</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Portfolio &middot; UC Riverside HPCC &middot; 2017 to 2019</p>
+          <h1>UCR HPCC work, 2017-2019</h1>
+          <p class="tagline">Lead HPC administrator, High Performance Computing Center, UC Riverside.</p>
+          <p class="pitch">The work preserved here: the HPCC AWS Cluster (HPCC Cloud Service), which let a lab launch its own private HPC cluster in AWS from the HPCC cluster with <code>hpcc_cloud</code>, a cfnCluster wrapper; 57 environment modules for the cluster's software stack; and the files from the Introduction to Python workshop. Every file is my own, and each 2017-2019 commit keeps its original date and message.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019"><i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub</a>
+            <a class="btn btn-secondary" href="#cloud"><i class="fa-solid fa-cloud" aria-hidden="true"></i> Tour the cloud service</a>
+          </div>
+        </div>
+        <figure class="terminal">
+          <figcaption class="terminal-bar">
+            <span class="dot" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span>
+            <span class="terminal-title">HPCC cluster - from the operation manual, 2018</span>
+          </figcaption>
+<pre class="terminal-body"><code><span class="prompt">$</span> hpcc_cloud create new-cluster
+Beginning cluster creation for cluster: new-cluster
+Creating stack named: cfncluster-new-cluster
+Status: cfncluster-new-cluster - CREATE_COMPLETE
+Output:"MasterPublicIP"="&lt;MasterPublicIP&gt;"
+Output:"MasterPrivateIP"="&lt;MasterPrivateIP&gt;"
+Output:"GangliaPublicURL"="http://&lt;MasterPublicIP&gt;/ganglia/"
+Output:"GangliaPrivateURL"="http://&lt;MasterPrivateIP&gt;/ganglia/"</code></pre>
+          <p class="terminal-note">Addresses replaced with placeholders.</p>
+        </figure>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Repository at a glance">
+      <div class="container stats">
+        <div class="stat"><span class="stat-n">143</span><span class="stat-l">original commits, 2017-2019</span></div>
+        <div class="stat"><span class="stat-n">57</span><span class="stat-l">environment-module folders</span></div>
+        <div class="stat"><span class="stat-n">66</span><span class="stat-l">versioned modulefiles</span></div>
+        <div class="stat"><span class="stat-n">6</span><span class="stat-l">AWS cluster manual pages</span></div>
+        <div class="stat"><span class="stat-n">19</span><span class="stat-l">workshop sessions taught</span></div>
+      </div>
+    </section>
+
+    <section id="whats-here" class="section section-alt">
+      <div class="container">
+        <p class="label">01 / What's here</p>
+        <h2>Five folders, one job: keep researchers computing</h2>
+        <p class="lead">The repository is a portfolio of the files I wrote for UCR HPCC. Where others later edited a file, it keeps my last version before those edits.</p>
+        <div class="cards">
+          <article class="card">
+            <i class="fa-solid fa-cloud-arrow-up card-icon" aria-hidden="true"></i>
+            <h3>HPCC AWS Cluster manual</h3>
+            <p>The 2018 user manual for the HPCC Cloud Service: intro, AWS account setup, the data egress waiver, cluster setup and operation, and billing and budget alerts.</p>
+            <a class="card-link" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/aws-cluster-manual">aws-cluster-manual/</a>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-terminal card-icon" aria-hidden="true"></i>
+            <h3><code>hpcc_cloud</code> on cfnCluster</h3>
+            <p>Labs created, checked, listed and deleted their own clusters with one command each. The <code>cfncluster</code> module (1.3, then 1.4) loaded the tool from a Python virtual environment.</p>
+            <a class="card-link" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/cfncluster">environment-modules/cfncluster/</a>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-boxes-stacked card-icon" aria-hidden="true"></i>
+            <h3>Environment modules</h3>
+            <p>57 module folders for the HPCC software stack, 2017-2019: CUDA and cuDNN, TensorFlow GPU, BUSCO, GATK, SPAdes, Trinity, RAxML-NG, Gaussian, Rosetta and more.</p>
+            <a class="card-link" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules">environment-modules/</a>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-cubes card-icon" aria-hidden="true"></i>
+            <h3>AWS cluster modules</h3>
+            <p>The start of a separate module repository for software on the AWS clusters HPCC supported (2018).</p>
+            <a class="card-link" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/aws-cluster-modules">aws-cluster-modules/</a>
+          </article>
+          <article class="card">
+            <i class="fa-brands fa-python card-icon" aria-hidden="true"></i>
+            <h3>Introduction to Python</h3>
+            <p>18 example files for the HPCC Introduction to Python workshop (Oct 2018), from variable types through submitting a Python script to Slurm.</p>
+            <a class="card-link" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/python-intro-workshop">python-intro-workshop/</a>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-atom card-icon" aria-hidden="true"></i>
+            <h3>Slurm example</h3>
+            <p>Quantum ESPRESSO submission scripts for the OpenMPI and Intel builds, with an example input file (2019).</p>
+            <a class="card-link" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/slurm-examples">slurm-examples/</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cloud" class="section">
+      <div class="container">
+        <p class="label">02 / HPCC Cloud Service</p>
+        <h2>The HPCC AWS Cluster</h2>
+        <p class="lead">A lab-private HPC cluster in AWS, created on demand from the HPCC cluster. The manual's pitch, in its own terms:</p>
+        <ul class="benefits">
+          <li><i class="fa-solid fa-stopwatch" aria-hidden="true"></i> <span>Build a private cluster in 10 minutes.</span></li>
+          <li><i class="fa-solid fa-arrows-up-down" aria-hidden="true"></i> <span>Any number of nodes, auto scaling up and down; limit 20 to start.</span></li>
+          <li><i class="fa-solid fa-microchip" aria-hidden="true"></i> <span>Any type of compute node: high memory, high CPU single or multi node, GPUs, or the HPCC default configuration.</span></li>
+          <li><i class="fa-solid fa-trash-can" aria-hidden="true"></i> <span>Keep it only as long as you need it; delete when done.</span></li>
+          <li><i class="fa-solid fa-list-check" aria-hidden="true"></i> <span>Familiar interface and job scheduler (Slurm: <code>sbatch</code>, <code>squeue</code>).</span></li>
+          <li><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> <span>HPCC installs the software you need if it is not already there.</span></li>
+          <li><i class="fa-solid fa-clone" aria-hidden="true"></i> <span>Build as many clusters as you need, even at the same time.</span></li>
+          <li><i class="fa-solid fa-receipt" aria-hidden="true"></i> <span>Pay only for the time you use: per-minute billing.</span></li>
+        </ul>
+
+        <h3 class="sub">How it fit together</h3>
+        <div class="arch" role="img" aria-label="Diagram: the lab's AWS account supplies an IAM user, key pair and budget; on the HPCC cluster, hpcc_cloud configure and create drive cfnCluster, which builds a CloudFormation stack named cfncluster-name; that stack is a private cluster with a master node, auto-scaling compute nodes, Slurm and Ganglia; the user connects with ssh and scp and deletes the cluster when done.">
+          <div class="arch-box arch-acct">
+            <p class="arch-tag">Lab AWS account</p>
+            <p class="arch-title">Master account + IAM users</p>
+            <p class="arch-body">Access key, EC2 key pair, budget alert. Covered by the UC-wide AWS agreement.</p>
+          </div>
+          <div class="arch-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="arch-box arch-hpcc">
+            <p class="arch-tag">HPCC cluster</p>
+            <p class="arch-title"><code>hpcc_cloud</code></p>
+            <p class="arch-body"><code>configure</code>, <code>create</code>, <code>status</code>, <code>list</code>, <code>delete</code>; wraps cfnCluster, loaded by the <code>cfncluster</code> module.</p>
+          </div>
+          <div class="arch-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="arch-box arch-aws">
+            <p class="arch-tag">AWS, us-west-1</p>
+            <p class="arch-title">Stack <code>cfncluster-&lt;name&gt;</code></p>
+            <p class="arch-body">Master node plus auto-scaling compute nodes, Slurm scheduler, Ganglia monitoring URL.</p>
+          </div>
+          <div class="arch-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="arch-box arch-user">
+            <p class="arch-tag">Researcher</p>
+            <p class="arch-title"><code>ssh</code> / <code>scp</code> as <code>centos</code></p>
+            <p class="arch-body">Upload inputs, <code>sbatch</code>, <code>squeue</code>, download results, delete the cluster.</p>
+          </div>
+        </div>
+
+        <h3 class="sub" id="walkthrough">Walkthrough, from the manual</h3>
+        <ol class="steps">
+          <li class="step">
+            <div class="step-head"><span class="step-n">1</span><h4>Create the AWS accounts</h4></div>
+            <p>From the lab's master AWS account, open IAM and add a user for cluster work (programmatic access is all a lab member needs), assign it to a group, and download the credentials CSV with the access key ID and secret key. Then, in the EC2 console for N. California, create a key pair named for the user and save the key file. Send both files to the user privately.</p>
+            <p class="step-src"><a href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/aws-cluster-manual/manuals_hpcc-aws-cluster_create-acct.md">Account creation page</a></p>
+          </li>
+          <li class="step">
+            <div class="step-head"><span class="step-n">2</span><h4>Attach the account to the UC agreement</h4></div>
+            <p>A UC-wide AWS agreement provides a data egress fee waiver of up to 15% of total monthly AWS fees. It applies to UC accounts except commercial web hosting, media streaming and MOOCs, and requires 80%+ of egress over an approved research network such as CENIC or Internet2, which normal UC usage meets. The manual walks through connecting the account to the agreement and a purchase order.</p>
+            <p class="step-src"><a href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/aws-cluster-manual/manuals_hpcc-aws-cluster_egress.md">Egress waiver page</a></p>
+          </li>
+          <li class="step">
+            <div class="step-head"><span class="step-n">3</span><h4>Configure <code>hpcc_cloud</code> on the HPCC cluster</h4></div>
+            <p>Log in to the HPCC cluster and run the configure step. It prompts for the cluster template (default), the AWS access key and secret, region <code>us-west-1</code>, VPC name (default public), and then offers lists to choose the key name, VPC ID, master subnet and IAM user.</p>
+<pre><code>hpcc_cloud configure</code></pre>
+            <p class="step-src"><a href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/aws-cluster-manual/manuals_hpcc-aws-cluster_setup.md">Setup page</a></p>
+          </li>
+          <li class="step">
+            <div class="step-head"><span class="step-n">4</span><h4>Create, check and list clusters</h4></div>
+            <p>Creation builds a CloudFormation stack and prints the master node's public IP, used for every <code>ssh</code> and <code>scp</code> afterwards.</p>
+<pre><code>hpcc_cloud create &lt;NameForYourCluster&gt;
+hpcc_cloud status &lt;NameForYourCluster&gt;
+hpcc_cloud list</code></pre>
+          </li>
+          <li class="step">
+            <div class="step-head"><span class="step-n">5</span><h4>Move data in and run a job</h4></div>
+<pre><code>scp -i /path/to/your/key-file.pem &lt;local-files-to-copy&gt; centos@&lt;MasterPublicIP&gt;:.
+ssh -i /path/to/your/key-file.pem centos@&lt;MasterPublicIP&gt;
+sbatch slurm-submission-script.sh
+squeue</code></pre>
+          </li>
+          <li class="step">
+            <div class="step-head"><span class="step-n">6</span><h4>Download results and delete the cluster</h4></div>
+            <p>Results are pulled back from the HPCC cluster; deleting the cluster stops the node charges.</p>
+<pre><code>scp -i /path/to/your/key-file.pem centos@&lt;MasterPublicIP&gt;:./&lt;results-to-download&gt; .
+hpcc_cloud delete new-cluster</code></pre>
+            <p class="step-src"><a href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/aws-cluster-manual/manuals_hpcc-aws-cluster_operation.md">Cluster operation page</a></p>
+          </li>
+          <li class="step">
+            <div class="step-head"><span class="step-n">7</span><h4>Keep costs in view</h4></div>
+            <p>Node time and storage are the two biggest costs, so the manual advises moving only the data you need and deleting clusters when idle. Its worked example: about $0.43 per hour for the default configuration (one head node and one 8-core compute node with 16 GB RAM, no spot pricing, 25 GB of data). Billing is monthly to a purchase order, and a budget alert set at $50 a month warns when projected spend would exceed it.</p>
+            <p class="step-src"><a href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/aws-cluster-manual/manuals_hpcc-aws-cluster_billing.md">Cost control and billing page</a></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="gallery" class="section section-alt">
+      <div class="container">
+        <p class="label">03 / Screenshots</p>
+        <h2>From the 2018 training account</h2>
+        <p class="lead">Original AWS console screenshots from the manual.</p>
+        <div class="gallery">
+          <figure class="shot">
+            <a href="img/cloud-aws-console.png"><img src="img/cloud-aws-console.png" width="1370" height="744" loading="lazy" alt="AWS EC2 dashboard for the N. California region showing running instances, volumes, key pairs and security groups."></a>
+            <figcaption><span class="shot-step">Account setup</span> The EC2 console, where the manual sends you to Key Pairs.</figcaption>
+          </figure>
+          <figure class="shot">
+            <a href="img/cloud-aws-key-pair-page.png"><img src="img/cloud-aws-key-pair-page.png" width="1374" height="364" loading="lazy" alt="AWS EC2 Key Pairs page listing four key pairs with a Create Key Pair button."></a>
+            <figcaption><span class="shot-step">Account setup</span> Key pair management: one key per cluster user.</figcaption>
+          </figure>
+          <figure class="shot">
+            <a href="img/cloud-aws-billing-dashboard.png"><img src="img/cloud-aws-billing-dashboard.png" width="1617" height="724" loading="lazy" alt="AWS Billing and Cost Management dashboard for March 2018 with month-to-date spend charts."></a>
+            <figcaption><span class="shot-step">Cost control</span> The Billing &amp; Cost Management dashboard, bookmarked as the main billing view.</figcaption>
+          </figure>
+          <figure class="shot">
+            <a href="img/cloud-aws-billing-budget1.png"><img src="img/cloud-aws-billing-budget1.png" width="1547" height="621" loading="lazy" alt="AWS Budgets landing page with a Create budget button and getting-started panels."></a>
+            <figcaption><span class="shot-step">Cost control</span> AWS Budgets, where the $50-a-month alert is created.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="modules" class="section">
+      <div class="container">
+        <p class="label">04 / Environment modules</p>
+        <h2>57 packages on the HPCC software stack</h2>
+        <p class="lead">Tcl modulefiles written for the HPCC cluster, 2017-2019: 57 package folders holding 66 versioned modulefiles (casm and gmt hold build notes only). Larger tags have more versions; every tag links to its folder.</p>
+        <ul class="tag-cloud" aria-label="Environment module package names">
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/atram" title="2.0">atram</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/beagle" title="4.0">beagle</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/beagle-lib" title="3.1.2">beagle-lib</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/bowtie2" title="2.3.4.1">bowtie2</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/bpp" title="3.4">bpp</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/busco" title="3.0.1">busco</a></li>
+          <li><a class="tag t0" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/casm" title="README only">casm</a></li>
+          <li><a class="tag t2 tag-feat" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/cfncluster" title="1.3, 1.4">cfncluster</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/chloroextractor" title="1.0.5">chloroextractor</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/cplex" title="12.8">cplex</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/cpmd" title="4.1">cpmd</a></li>
+          <li><a class="tag t1 tag-feat" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/cuda" title="8.0">cuda</a></li>
+          <li><a class="tag t2 tag-feat" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/cuDNN" title="5.1, 6.0">cuDNN</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/db-diamond" title="20190125">db-diamond</a></li>
+          <li><a class="tag t2" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/db-ncbi" title="20190709, v5.20190517">db-ncbi</a></li>
+          <li><a class="tag t2" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/diamond" title="0.9.22, 0.9.24">diamond</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/eigenstrat-hawk" title="6.0.1">eigenstrat-hawk</a></li>
+          <li><a class="tag t2" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/espresso" title="6.3, 6.3_intel">espresso</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/exabayes" title="1.5">exabayes</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/flappie" title="1.1.0">flappie</a></li>
+          <li><a class="tag t2" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/freebayes" title="0.9.9, 1.1.0">freebayes</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/gatk" title="4.1.1.0">gatk</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/gaussian" title="9">gaussian</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/gcta" title="1.26.0">gcta</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/glpk" title="4.65">glpk</a></li>
+          <li><a class="tag t0" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/gmt" title="README only">gmt</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/HAWK" title="0.8.3">HAWK</a></li>
+          <li><a class="tag t1 tag-feat" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/hpcc_utils" title="1">hpcc_utils</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/i-adhore" title="3.0.01">i-adhore</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/interproscan" title="5.25-64.0">interproscan</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/jellyfish-hawk" title="1.1.6">jellyfish-hawk</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/k-slam" title="1.0">k-slam</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/maven" title="3.5.4">maven</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/meme" title="5.0.2">meme</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/ncbi-blast" title="2.9.0+">ncbi-blast</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/ncbi_edirect" title="1.0">ncbi_edirect</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/neovim" title="0.2.1">neovim</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/nQuire" title="1.0.0">nQuire</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/oligoarray" title="2.1">oligoarray</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/oligoarrayaux" title="3.8">oligoarrayaux</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/paladin" title="1.4.1">paladin</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/python" title="3.6.0-venv">python</a></li>
+          <li><a class="tag t2" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/R" title="3.5.0, 3.5.0-dev">R</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/RAxML_NG" title="0.9.0">RAxML_NG</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/RefalignerAssembler" title="5122">RefalignerAssembler</a></li>
+          <li><a class="tag t3" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/revbayes" title="1.0.11, 1.0.11-container, 1.0.11-mpi">revbayes</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/rosetta" title="2018.09.60072">rosetta</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/rsem" title="1.3.0">rsem</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/SPAdes" title="3.12.0">SPAdes</a></li>
+          <li><a class="tag t3" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/stacks" title="2.0, 2.3, 2.3b">stacks</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/staskfarm" title="1.0">staskfarm</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/supernova" title="2.0.1">supernova</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/svfilter" title="1.0">svfilter</a></li>
+          <li><a class="tag t1 tag-feat" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/tensorflow-gpu" title="1.0">tensorflow-gpu</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/trinity-rnaseq" title="2.8.4">trinity-rnaseq</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/vcftools" title="0.1.15">vcftools</a></li>
+          <li><a class="tag t1" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules/vsearch" title="2.9.1">vsearch</a></li>
+        </ul>
+        <div class="cards cards-3">
+          <article class="card">
+            <i class="fa-solid fa-link card-icon" aria-hidden="true"></i>
+            <h3>Dependencies load with the package</h3>
+            <p><code>tensorflow-gpu/1.0</code> runs <code>module load cuda/8.0</code> and <code>module load cuDNN/5.1</code>, then activates its Python environment, so one command gives a working GPU stack.</p>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-code-branch card-icon" aria-hidden="true"></i>
+            <h3>Several builds side by side</h3>
+            <p>RevBayes ships as <code>1.0.11</code>, <code>1.0.11-mpi</code> and <code>1.0.11-container</code> (Singularity); Quantum ESPRESSO as <code>6.3</code> and <code>6.3_intel</code>; <code>.version</code> files set the defaults.</p>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-user-gear card-icon" aria-hidden="true"></i>
+            <h3>Tools for admins too</h3>
+            <p><code>hpcc_utils</code> puts a shared bin of HPCC admin tools on the path, and <code>cfncluster</code> activates the virtual environment behind the AWS cluster service.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="workshop" class="section section-alt">
+      <div class="container">
+        <p class="label">05 / Training</p>
+        <h2>HPCC Introduction to Python workshop</h2>
+        <div class="split">
+          <div>
+            <p class="lead">Example scripts taught in October 2018, one file per idea, ending with a Python script that carries its own Slurm directives and is submitted with <code>sbatch</code>.</p>
+            <ul class="file-list">
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/classes.py"><i class="fa-brands fa-python" aria-hidden="true"></i> classes.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/comparison-operators.py"><i class="fa-brands fa-python" aria-hidden="true"></i> comparison-operators.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/dictionary-type-variables.py"><i class="fa-brands fa-python" aria-hidden="true"></i> dictionary-type-variables.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/empty-python-script.py"><i class="fa-brands fa-python" aria-hidden="true"></i> empty-python-script.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/external-commands.py"><i class="fa-brands fa-python" aria-hidden="true"></i> external-commands.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/filesystem-operations.py"><i class="fa-brands fa-python" aria-hidden="true"></i> filesystem-operations.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/flow-control-sudo-code.txt"><i class="fa-brands fa-python" aria-hidden="true"></i> flow-control-sudo-code.txt</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/functions.py"><i class="fa-brands fa-python" aria-hidden="true"></i> functions.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/indentation-example.py"><i class="fa-brands fa-python" aria-hidden="true"></i> indentation-example.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/list-type-variables.py"><i class="fa-brands fa-python" aria-hidden="true"></i> list-type-variables.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/module-import.py"><i class="fa-brands fa-python" aria-hidden="true"></i> module-import.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/number-type-variables.py"><i class="fa-brands fa-python" aria-hidden="true"></i> number-type-variables.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/python-slurm.py"><i class="fa-brands fa-python" aria-hidden="true"></i> python-slurm.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/read-write-files.py"><i class="fa-brands fa-python" aria-hidden="true"></i> read-write-files.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/string-type-variables.py"><i class="fa-brands fa-python" aria-hidden="true"></i> string-type-variables.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/tuple-type-variables.py"><i class="fa-brands fa-python" aria-hidden="true"></i> tuple-type-variables.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/user-input.py"><i class="fa-brands fa-python" aria-hidden="true"></i> user-input.py</a></li>
+          <li><a class="file-chip" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/work-with-data.py"><i class="fa-brands fa-python" aria-hidden="true"></i> work-with-data.py</a></li>
+            </ul>
+          </div>
+          <figure class="code-fig">
+            <figcaption><a href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/python-intro-workshop/python-slurm.py">python-slurm.py</a> (header)</figcaption>
+<pre><code>#!/usr/bin/env python
+
+#SBATCH --ntasks=6
+#SBATCH --time=02:00:00
+#SBATCH --mem=100g
+#SBATCH --output=output-simple-%j.out
+#SBATCH -p short,batch,intel
+
+import os
+import random
+import json</code></pre>
+          </figure>
+        </div>
+        <div class="split split-gap">
+          <figure class="code-fig">
+            <figcaption><a href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/slurm-examples/espresso/espresso.sh">slurm-examples/espresso/espresso.sh</a></figcaption>
+<pre><code>#!/bin/bash -l
+#SBATCH --nodes=1
+#SBATCH --ntasks=6
+#SBATCH --mem-per-cpu=1G
+
+export OMP_NUM_THREADS=1
+
+module load espresso/6.3
+
+mpirun pw.x -in input_file.in &gt;&amp; output_file.out</code></pre>
+          </figure>
+          <div class="archive">
+            <i class="fa-solid fa-chalkboard-user archive-icon" aria-hidden="true"></i>
+            <h3>Training archive</h3>
+            <p>The Python workshop was one of 19 HPCC workshop sessions I taught between 2017 and 2019. The slide decks are collected in the training archive.</p>
+            <a class="btn btn-secondary" href="https://charles-forsyth.github.io/handbook/2019/presentations.html#training-archive">Open the training archive</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="section">
+      <div class="container">
+        <p class="label">06 / Timeline</p>
+        <h2>143 commits, June 2017 to July 2019</h2>
+        <p class="lead">Commits per month from the repository history (43 in 2017, 69 in 2018, 31 in 2019).</p>
+        <div class="chart-wrap">
+          <ol class="chart" aria-label="Commits per month, June 2017 to July 2019">
+          <li class="bar-col"><span class="bar h12" title="Jun 2017: 12 commits"><span class="bar-n">12</span></span><span class="bar-lab">J</span><span class="bar-year">2017</span><span class="sr-only">Jun 2017: 12 commits</span></li>
+          <li class="bar-col"><span class="bar h8" title="Jul 2017: 8 commits"><span class="bar-n">8</span></span><span class="bar-lab">J</span><span class="sr-only">Jul 2017: 8 commits</span></li>
+          <li class="bar-col"><span class="bar h7" title="Aug 2017: 7 commits"><span class="bar-n">7</span></span><span class="bar-lab">A</span><span class="sr-only">Aug 2017: 7 commits</span></li>
+          <li class="bar-col"><span class="bar h10" title="Sep 2017: 10 commits"><span class="bar-n">10</span></span><span class="bar-lab">S</span><span class="sr-only">Sep 2017: 10 commits</span></li>
+          <li class="bar-col"><span class="bar h4" title="Oct 2017: 4 commits"><span class="bar-n">4</span></span><span class="bar-lab">O</span><span class="sr-only">Oct 2017: 4 commits</span></li>
+          <li class="bar-col"><span class="bar h0" title="Nov 2017: 0 commits"><span class="bar-n"></span></span><span class="bar-lab">N</span><span class="sr-only">Nov 2017: 0 commits</span></li>
+          <li class="bar-col"><span class="bar h2" title="Dec 2017: 2 commits"><span class="bar-n">2</span></span><span class="bar-lab">D</span><span class="sr-only">Dec 2017: 2 commits</span></li>
+          <li class="bar-col"><span class="bar h0" title="Jan 2018: 0 commits"><span class="bar-n"></span></span><span class="bar-lab">J</span><span class="bar-year">2018</span><span class="sr-only">Jan 2018: 0 commits</span></li>
+          <li class="bar-col"><span class="bar h2" title="Feb 2018: 2 commits"><span class="bar-n">2</span></span><span class="bar-lab">F</span><span class="sr-only">Feb 2018: 2 commits</span></li>
+          <li class="bar-col"><span class="bar h19" title="Mar 2018: 19 commits"><span class="bar-n">19</span></span><span class="bar-lab">M</span><span class="sr-only">Mar 2018: 19 commits</span></li>
+          <li class="bar-col"><span class="bar h2" title="Apr 2018: 2 commits"><span class="bar-n">2</span></span><span class="bar-lab">A</span><span class="sr-only">Apr 2018: 2 commits</span></li>
+          <li class="bar-col"><span class="bar h3" title="May 2018: 3 commits"><span class="bar-n">3</span></span><span class="bar-lab">M</span><span class="sr-only">May 2018: 3 commits</span></li>
+          <li class="bar-col"><span class="bar h5" title="Jun 2018: 5 commits"><span class="bar-n">5</span></span><span class="bar-lab">J</span><span class="sr-only">Jun 2018: 5 commits</span></li>
+          <li class="bar-col"><span class="bar h4" title="Jul 2018: 4 commits"><span class="bar-n">4</span></span><span class="bar-lab">J</span><span class="sr-only">Jul 2018: 4 commits</span></li>
+          <li class="bar-col"><span class="bar h10" title="Aug 2018: 10 commits"><span class="bar-n">10</span></span><span class="bar-lab">A</span><span class="sr-only">Aug 2018: 10 commits</span></li>
+          <li class="bar-col"><span class="bar h1" title="Sep 2018: 1 commits"><span class="bar-n">1</span></span><span class="bar-lab">S</span><span class="sr-only">Sep 2018: 1 commits</span></li>
+          <li class="bar-col"><span class="bar h19" title="Oct 2018: 19 commits"><span class="bar-n">19</span></span><span class="bar-lab">O</span><span class="sr-only">Oct 2018: 19 commits</span></li>
+          <li class="bar-col"><span class="bar h1" title="Nov 2018: 1 commits"><span class="bar-n">1</span></span><span class="bar-lab">N</span><span class="sr-only">Nov 2018: 1 commits</span></li>
+          <li class="bar-col"><span class="bar h3" title="Dec 2018: 3 commits"><span class="bar-n">3</span></span><span class="bar-lab">D</span><span class="sr-only">Dec 2018: 3 commits</span></li>
+          <li class="bar-col"><span class="bar h7" title="Jan 2019: 7 commits"><span class="bar-n">7</span></span><span class="bar-lab">J</span><span class="bar-year">2019</span><span class="sr-only">Jan 2019: 7 commits</span></li>
+          <li class="bar-col"><span class="bar h4" title="Feb 2019: 4 commits"><span class="bar-n">4</span></span><span class="bar-lab">F</span><span class="sr-only">Feb 2019: 4 commits</span></li>
+          <li class="bar-col"><span class="bar h4" title="Mar 2019: 4 commits"><span class="bar-n">4</span></span><span class="bar-lab">M</span><span class="sr-only">Mar 2019: 4 commits</span></li>
+          <li class="bar-col"><span class="bar h4" title="Apr 2019: 4 commits"><span class="bar-n">4</span></span><span class="bar-lab">A</span><span class="sr-only">Apr 2019: 4 commits</span></li>
+          <li class="bar-col"><span class="bar h11" title="May 2019: 11 commits"><span class="bar-n">11</span></span><span class="bar-lab">M</span><span class="sr-only">May 2019: 11 commits</span></li>
+          <li class="bar-col"><span class="bar h0" title="Jun 2019: 0 commits"><span class="bar-n"></span></span><span class="bar-lab">J</span><span class="sr-only">Jun 2019: 0 commits</span></li>
+          <li class="bar-col"><span class="bar h1" title="Jul 2019: 1 commits"><span class="bar-n">1</span></span><span class="bar-lab">J</span><span class="sr-only">Jul 2019: 1 commits</span></li>
+          </ol>
+        </div>
+        <ol class="milestones">
+          <li><span class="ms-date">Jun 2017</span><span class="ms-text">First module, for nQuire. CUDA 8, cuDNN 5.1 and 6, and a TensorFlow GPU module that loads both follow the same month.</span></li>
+          <li><span class="ms-date">Sep 2017</span><span class="ms-text"><code>cfncluster</code> module added, with notes on installing cfnCluster in a virtual environment.</span></li>
+          <li><span class="ms-date">Dec 2017</span><span class="ms-text"><code>hpcc_utils</code> module for HPCC admin tools.</span></li>
+          <li><span class="ms-date">Feb 2018</span><span class="ms-text">cfnCluster 1.4 module.</span></li>
+          <li><span class="ms-date">Mar 2018</span><span class="ms-text">AWS cluster module repository started; HPCC AWS Cluster manual written, with recorded setup and operation walkthroughs.</span></li>
+          <li><span class="ms-date">Oct 2018</span><span class="ms-text">Introduction to Python workshop files.</span></li>
+          <li><span class="ms-date">May 2019</span><span class="ms-text">RAxML-NG MPI, RevBayes in a Singularity container and as an MPI build, NCBI BLAST 2.9.0, and the Quantum ESPRESSO Slurm examples.</span></li>
+          <li><span class="ms-date">Jul 2019</span><span class="ms-text">Last commit: an NCBI database module.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="links" class="section section-alt">
+      <div class="container">
+        <p class="label">07 / Links</p>
+        <h2>Read the source</h2>
+        <ul class="link-grid">
+          <li><a class="link-card" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Repository</span></a></li>
+          <li><a class="link-card" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/README.md"><i class="fa-solid fa-book" aria-hidden="true"></i><span>README</span></a></li>
+          <li><a class="link-card" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/blob/main/aws-cluster-manual/manuals_hpcc-aws-cluster_intro.md"><i class="fa-solid fa-cloud" aria-hidden="true"></i><span>AWS cluster manual</span></a></li>
+          <li><a class="link-card" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/environment-modules"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i><span>Environment modules</span></a></li>
+          <li><a class="link-card" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/tree/main/python-intro-workshop"><i class="fa-brands fa-python" aria-hidden="true"></i><span>Python workshop files</span></a></li>
+          <li><a class="link-card" href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019/commits/main"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i><span>Commit history</span></a></li>
+          <li><a class="link-card" href="https://charles-forsyth.github.io/handbook/2019/presentations.html#training-archive"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i><span>Training archive</span></a></li>
+          <li><a class="link-card" href="https://charles-forsyth.github.io/cv.html"><i class="fa-solid fa-id-card" aria-hidden="true"></i><span>CV</span></a></li>
+        </ul>
+        <p class="note">Host names in the manual are historical and may no longer resolve. The code and docs were created for UCR HPCC; no license is granted beyond viewing.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Built by <a href="https://charles-forsyth.github.io/">Charles Forsyth</a> &middot; UC Riverside</p>
+      <p class="footer-note">Source available on <a href="https://github.com/charles-forsyth/ucr-hpcc-2017-2019">GitHub</a>; no license granted.</p>
+    </div>
+  </footer>
+</body>
+</html>
